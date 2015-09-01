@@ -1,7 +1,6 @@
 ---
 
 - name: Meteor | Install meteor
-  shell: curl https://install.meteor.com | /bin/sh
-
-- name: Meteor | Install meteorite
-  npm: name=meteorite global=yes state=present
+  shell: >
+    curl https://install.meteor.com | /bin/sh
+    creates=/home/{{ ansible_ssh_user }}/.meteor

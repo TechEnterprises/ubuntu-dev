@@ -1,24 +1,23 @@
 ---
 
 - name: Ubuntu Development Environment
-  hosts: 127.0.0.1
-  user: pcoffey
+  hosts: all
   sudo: yes
+  user: pcoffey
+  vars:
+    ansible_ssh_user: pcoffey
 
   roles:
-    - linux-dev
-    - web
-    - nodejs
-    - ruby
-    - php
-    - mysql
-    - meteor
-    - go
-    - redis
-    - drupal
-    - frontend
+    - ui
     - dotfiles
-    - browsers
-    - vm
-    - misc
+    - web
+    - php
+    - nodejs
+    - go
+    - mysql
+    - drupal
     - fourkitchens
+    - frontend
+    - linux-dev
+    - meteor
+    - vm

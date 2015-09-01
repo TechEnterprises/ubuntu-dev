@@ -1,13 +1,11 @@
 ---
 
-- name: Node.js | Install prerequisites
-  action: apt pkg=python-software-properties state=installed
+- name: Install nvm
+  shell: >
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+    creates=/home/{{ ansible_ssh_user }}/.nvm/nvm.sh
 
-- name: Node.js | Add the node.js PPA
-  action: command add-apt-repository -y ppa:chris-lea/node.js creates=/etc/apt/sources.list.d/chris-lea-node_js-precise.list
-
-- name: Node.js | Update the apt cache for the new repository
-  action: apt update-cache=yes
-
-- name: Node.js | Install node
-  action: apt pkg=nodejs state=installed
+- name: Install node and set version
+  shell: >
+    /bin/bash -c "source ~/.nvm/nvm.sh && nvm install stable && nvm alias default stable"
+    creates=/home/{{ ansible_ssh_user }}/.nvm/alias

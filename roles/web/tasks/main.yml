@@ -2,7 +2,6 @@
 
 - name: Apache2 | Install required packages
   apt: pkg=apache2 state=installed
-  tags: apache2
 
 - name: Apache2 | Enable Rewrite Module
   command: a2enmod rewrite

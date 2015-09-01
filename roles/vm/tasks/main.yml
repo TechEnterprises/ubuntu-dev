@@ -1,5 +1,8 @@
 ---
 
+- name: Configure the Oracle APT key
+  apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc state=present
+
 - name: Virtualbox | Add repository
   apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian saucy contrib' state=present
 
@@ -8,3 +11,6 @@
 
 - name: Virtualbox | Install Virtualbox v4.3.x
   apt: name=virtualbox-4.3 state=installed force=yes
+
+- name: Vagrant | Install Vagrant
+  apt: name=vagrant state=installed force=yes

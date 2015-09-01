@@ -30,7 +30,7 @@
   file: path=/home/{{ ansible_ssh_user }}/.zshrc src=/home/{{ ansible_ssh_user }}/.dotfiles/.zshrc state=link owner={{ ansible_ssh_user }}
 
 - name: ZSH | Set ZSH as the default shell
-  user: name={{ ansible_ssh_user }} shell=/usr/bin/zsh
+  user: name={{ ansible_ssh_user }} shell=/bin/zsh
 
 - name: Terminal | Make Terminal has pretty colors
   command: bash /home/{{ ansible_ssh_user }}/.dotfiles/gnome-terminal-theme.sh

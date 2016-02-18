@@ -3,5 +3,5 @@
 - name: Paper | Add repository
   apt_repository: repo='ppa:snwh/pulp' state=present update_cache=yes
 
-- name: Slack | Install Slack
+- name: Paper | Install Paper theme
   apt: name=paper-gtk-theme state=latest

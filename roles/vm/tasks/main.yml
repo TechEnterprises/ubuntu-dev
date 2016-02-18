@@ -9,8 +9,8 @@
 - name: Virtualbox | Add key
   apt_key: url='http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc' state=present
 
-- name: Virtualbox | Install Virtualbox v4.3.x
-  apt: name=virtualbox-4.3 state=installed force=yes
+- name: Virtualbox | Install Virtualbox v5.0
+  apt: name=virtualbox-5.0 state=installed force=yes
 
 - name: Vagrant | Install Vagrant
   apt: name=vagrant state=installed force=yes

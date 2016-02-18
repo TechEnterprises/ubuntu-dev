@@ -1,7 +1,0 @@
----
-
-- name: Slack | Add repository
-  apt_repository: repo='ppa:rael-gc/scudcloud' state=present update_cache=yes
-
-- name: Slack | Install Slack
-  apt: name=scudcloud state=latest

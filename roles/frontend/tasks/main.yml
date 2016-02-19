@@ -2,12 +2,12 @@
 
 - name: Grunt | Install Grunt
   shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && npm install grunt-cli"
+    /bin/bash -c "source ~/.nvm/nvm.sh && npm install -g grunt-cli"
 
 - name: Gulp | Install Gulp
   shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && npm install gulp"
+    /bin/bash -c "source ~/.nvm/nvm.sh && npm install -g gulp"
 
 - name: Bower | Install Bower
   shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && npm install bower"
+    /bin/bash -c "source ~/.nvm/nvm.sh && npm install -g bower"

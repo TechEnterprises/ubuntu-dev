@@ -7,4 +7,5 @@
   apt: name=gcc state=installed
 
 - name: Kernal | Install linux-headers-*-generic
+  sudo: true
   action: shell apt-get install -y linux-headers-$(uname -r)

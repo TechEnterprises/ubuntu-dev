@@ -2,8 +2,8 @@
 
 - name: Ubuntu Development Environment
   hosts: all
-  sudo: yes
   user: pcoffey
+  sudo: false
   vars:
     ansible_ssh_user: pcoffey
 

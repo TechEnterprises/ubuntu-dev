@@ -1,7 +1,6 @@
 ---
 
 - name: Clone dotfile repo
-  sudo: false
   git: repo=https://github.com/patrickocoffeyo/dotfiles.git dest=/home/{{ ansible_ssh_user }}/.dotfiles update=yes recursive=yes
 
 - name: Vim | Install vim
@@ -20,7 +19,6 @@
   apt: pkg=zsh state=installed
 
 - name: ZSH | Clone oh-my-zsh repo
-  sudo: false
   git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=/home/{{ ansible_ssh_user }}/.oh-my-zsh
 
 - name: ZSH | Remove default .zshrc

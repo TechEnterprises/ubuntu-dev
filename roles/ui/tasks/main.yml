@@ -5,3 +5,6 @@
 
 - name: Paper | Install Paper theme
   apt: name=paper-gtk-theme state=latest
+
+- name: Paper | Install Paper theme icons
+  apt: name=paper-icon-theme state=latest

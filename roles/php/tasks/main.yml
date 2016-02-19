@@ -28,12 +28,15 @@
   apt: name=curl state=installed
 
 - name: Composer | install composer
+  sudo: true
   shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin creates=/usr/local/bin/composer.phar
 
 - name: Composer | composer.phar to composer
+  sudo: true
   shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
 
 - name: Composer | composer executable
+  sudo: true
   shell: chmod a+x /usr/local/bin/composer
 
 - name: PHP5 | Configuration /var/www/html/index.php

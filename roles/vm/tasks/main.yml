@@ -4,7 +4,7 @@
   apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc state=present
 
 - name: Virtualbox | Add repository
-  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian saucy contrib' state=present
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian wily contrib' state=present
 
 - name: Virtualbox | Add key
   apt_key: url='http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc' state=present

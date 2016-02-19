@@ -1,12 +1,15 @@
 ---
 
 - name: Configure the Oracle APT key
+  sudo: true
   apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc state=present
 
 - name: Virtualbox | Add repository
-  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian wily contrib' state=present
+  sudo: true
+  apt_repository: repo='deb http://download.virtualbox.org/virtualbox/debian wily contrib non-free' state=present
 
 - name: Virtualbox | Add key
+  sudo: true
   apt_key: url='http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc' state=present
 
 - name: Virtualbox | Install Virtualbox v5.0

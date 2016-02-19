@@ -1,11 +1,24 @@
 ---
-
 - name: Build Essentials | Install build-essentials pkg
+  sudo: true
   apt: name=build-essential state=installed
 
 - name: GCC | Install GNU Compiler Collection
+  sudo: true
   apt: name=gcc state=installed
 
 - name: Kernal | Install linux-headers-*-generic
   sudo: true
   action: shell apt-get install -y linux-headers-$(uname -r)
+
+- name: NFS | Install silver searcher
+  sudo: true
+  apt: name=silversearcher-ag state=latest
+
+- name: NFS | Install nfs-commons
+  sudo: true
+  apt: name=nfs-common state=latest
+
+- name: NFS | Install nfs-kernel-server
+  sudo: true
+  apt: name=nfs-kernal-server state=latest
